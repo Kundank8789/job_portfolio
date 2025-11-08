@@ -24,22 +24,24 @@ export default function Hero() {
             View Projects
           </a>
         </div>
+        {/* ✅ Email section — Copy to clipboard, NOT open Gmail */}
+        <div className="mt-6 text-sm text-gray-600 dark:text-gray-400">
+          <strong>Email:</strong>{" "}
+          <button
+            type="button"  // ✅ prevents opening mail app
+            className="underline hover:text-blue-500 cursor-pointer"
+            onClick={() => {
+              navigator.clipboard
+                .writeText("kundansinghh87@gmail.com")
+                .then(() => alert("✅ Email copied to clipboard!"))
+                .catch(() => alert("❌ Copy failed. Try manually."));
+            }}
+          >
+            kundansinghh87@gmail.com
+          </button>
+        </div>
 
-        {/* ✅ Email section (Copy to Clipboard Working Fix) */}
-<div className="mt-6 text-sm text-gray-600 dark:text-gray-400">
-  <strong>Email:</strong>{" "}
-  <button
-    className="underline hover:text-blue-500"
-    onClick={() => {
-      navigator.clipboard
-        .writeText("kundansinghh87@gmail.com")
-        .then(() => alert("✅ Email copied to clipboard!"))
-        .catch(() => alert("❌ Copy failed. Try manually."));
-    }}
-  >
-    kundansinghh87@gmail.com
-  </button>
-</div>
+
 
       </div>
 
