@@ -3,7 +3,7 @@ export const projects = [
     title: 'AI Fitness Tracker',
     description: 'An AI-powered activity recognition app that detects exercises from webcam input and provides feedback. Built with React on the frontend and a Node.js backend that serves model inferences. Features: real-time prediction, user plans, and MongoDB for persistence.',
     tech: ['React','Node.js','MongoDB','TensorFlow.js'],
-    live: 'https://url-rcrw.vercel.app/',
+    live: 'https://ai-fitness-coach-liart.vercel.app/',
     github: 'https://github.com/Kundank8789/AI-fitness-coach'
   },
   {
