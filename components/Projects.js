@@ -1,57 +1,57 @@
-"use client";
-
-import { projects } from "../data/projects";
-
-function Tech({ name }) {
-  return (
-    <span className="inline-block text-xs px-2 py-1 mr-2 mb-2 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300">
-      {name}
-    </span>
-  );
-}
+// components/Projects.js
+import { projects } from '../data/projects';
 
 export default function Projects() {
   return (
-    <section id="projects" className="mt-12 p-6 bg-white dark:bg-[#0f0f0f] rounded-xl shadow-sm transition-all">
-      <h2 className="text-2xl font-semibold text-black dark:text-white">Projects</h2>
-
-      <div className="mt-6 grid md:grid-cols-2 gap-6">
-        {projects.map((p, i) => (
-          <div
-            key={i}
-            className="p-5 rounded-xl shadow border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#161616] hover:scale-[1.02] transition-transform"
+    <section id="projects" className="mt-20">
+      <h2 className="text-3xl font-semibold text-black dark:text-white mb-8">Projects</h2>
+      
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div 
+            key={index}
+            className="bg-white dark:bg-[#0f0f0f] rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
-            <h3 className="text-xl font-semibold text-black dark:text-white">{p.title}</h3>
-            <p className="text-sm mt-2 text-gray-600 dark:text-gray-400">{p.description}</p>
-
-            <div className="mt-3">
-              {p.tech.map((t, idx) => (
-                <Tech key={idx} name={t} />
+            <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
+              {project.title}
+            </h3>
+            
+            <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+              {project.description}
+            </p>
+            
+            {/* Tech Stack Tags */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((tech, idx) => (
+                <span 
+                  key={idx}
+                  className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full"
+                >
+                  {tech}
+                </span>
               ))}
             </div>
-
-            <div className="mt-4 flex gap-4">
-              {p.live && (
-                <a
-                  href={p.live}
+            
+            {/* Links */}
+            <div className="flex gap-3">
+              {project.live && (
+                <a 
+                  href={project.live}
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-sm underline text-blue-600 dark:text-blue-400 hover:opacity-80"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors text-sm font-medium"
                 >
-                  Live →
+                  Live Demo →
                 </a>
               )}
-
-              {p.github && (
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm underline text-gray-700 dark:text-gray-300 hover:opacity-80"
-                >
-                  Code ↗
-                </a>
-              )}
+              <a 
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${project.live ? 'flex-1' : 'w-full'} bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white text-center py-2 px-4 rounded-lg transition-colors text-sm font-medium`}
+              >
+                Code ↗
+              </a>
             </div>
           </div>
         ))}
