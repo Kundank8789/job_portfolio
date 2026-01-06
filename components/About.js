@@ -10,7 +10,8 @@ export default function About(){
         <div>
           <h3 className="font-semibold">Skills</h3>
           <ul className="text-sm mt-2 space-y-1">
-            <li>HTML, CSS, JAvaScript, Tailwind CSS, React, Next.js, Node.js, Express,TypeScript, MongoDB</li>
+            <li>HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Node.js, Express, TypeScript, MongoDB</li>
+            {/* ↑↑↑ FIXED: Changed "JAvaScript" to "JavaScript" and added space after "Express," */}
             <li>TypeScript (basic), Prisma</li>
             <li>OpenAI API, LangChain, TensorFlow</li>
           </ul>
