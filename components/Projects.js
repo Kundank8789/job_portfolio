@@ -1,29 +1,56 @@
 // components/Projects.js
-import { projects } from '../data/projects';
+
+import Image from "next/image";
+import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
     <section id="projects" className="mt-20">
-      <h2 className="text-3xl font-semibold text-black dark:text-white mb-8">Projects</h2>
-      
+      <h2 className="text-3xl font-semibold text-black dark:text-white mb-8">
+        Projects
+      </h2>
+
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div 
+          <div
             key={index}
             className="bg-white dark:bg-[#0f0f0f] rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
+
+            {/* Project Thumbnail */}
+            {project.image && (
+              <div className="mb-4">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={350}
+                  className="rounded-lg object-cover border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+            )}
+
             <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
               {project.title}
             </h3>
-            
-            <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+
+            <p className="text-gray-700 dark:text-gray-300 text-sm mb-3 leading-relaxed">
               {project.description}
             </p>
-            
+
+            {/* 🔹 Highlights (Mini case-study bullets) */}
+            {project.highlights && (
+              <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-sm mb-4 space-y-1">
+                {project.highlights.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )}
+
             {/* Tech Stack Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.map((tech, idx) => (
-                <span 
+                <span
                   key={idx}
                   className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full"
                 >
@@ -31,11 +58,11 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            
+
             {/* Links */}
             <div className="flex gap-3">
               {project.live && (
-                <a 
+                <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -44,11 +71,14 @@ export default function Projects() {
                   Live Demo →
                 </a>
               )}
-              <a 
+
+              <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${project.live ? 'flex-1' : 'w-full'} bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white text-center py-2 px-4 rounded-lg transition-colors text-sm font-medium`}
+                className={`${
+                  project.live ? "flex-1" : "w-full"
+                } bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white text-center py-2 px-4 rounded-lg transition-colors text-sm font-medium`}
               >
                 Code ↗
               </a>

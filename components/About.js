@@ -1,35 +1,61 @@
 'use client'
-export default function About(){
+
+export default function About() {
   return (
     <section id="about" className="mt-20 p-6 bg-white dark:bg-[#0f0f0f] transition-all rounded-xl shadow-sm">
       <h2 className="text-3xl font-semibold text-black dark:text-white">About</h2>
+
       <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-        Passionate Full Stack Developer specializing in the MERN stack and AI-based applications. Skilled in building scalable, responsive, and efficient systems. Adept at integrating machine learning APIs and automating workflows to enhance web functionality. Strong problem-solving mindset with experience delivering real-world projects using modern development practices.
+        I am a Full Stack Developer specializing in the MERN stack and Next.js, with a strong focus on
+        building scalable web applications and solving real-world problems through clean architecture,
+        performance optimization, and intuitive user experience.
       </p>
-      <div className="mt-4 grid md:grid-cols-3 gap-4">
+
+      <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+        I’ve worked on projects such as a Grocery Delivery Platform, AI Fitness Tracker, URL Shortener,
+        and LinkedIn Clone — where I implemented authentication, database modeling, admin dashboards,
+        API integrations, and real-time user features.
+      </p>
+
+      <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+        I enjoy working across both frontend and backend, improving system performance, structuring
+        reusable components, and writing maintainable code. I am continuously learning system design,
+        DevOps basics, and AI-driven application workflows to build more production-ready solutions.
+      </p>
+
+      <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+        I am currently seeking full-time opportunities where I can contribute to impactful projects
+        and grow as a developer.
+      </p>
+
+      <div className="mt-6 grid md:grid-cols-3 gap-4">
+        
         <div>
-          <h3 className="font-semibold">Skills</h3>
-          <ul className="text-sm mt-2 space-y-1">
-            <li>HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Node.js, Express, TypeScript, MongoDB</li>
-            {/* ↑↑↑ FIXED: Changed "JAvaScript" to "JavaScript" and added space after "Express," */}
-            <li>TypeScript (basic), Prisma</li>
-            <li>OpenAI API, LangChain, TensorFlow</li>
+          <h3 className="font-semibold text-black dark:text-white">Skills</h3>
+          <ul className="text-sm mt-2 space-y-1 text-gray-700 dark:text-gray-300">
+            <li>MERN Stack • Next.js • TypeScript • Prisma</li>
+            <li>Node.js • Express • REST APIs • MongoDB</li>
+            <li>Tailwind CSS • Responsive UI • Reusable Components</li>
+            <li>Authentication (JWT, OAuth, NextAuth)</li>
           </ul>
         </div>
+
         <div>
-          <h3 className="font-semibold">Certifications</h3>
-          <ul className="text-sm mt-2 space-y-1">
+          <h3 className="font-semibold text-black dark:text-white">Certifications</h3>
+          <ul className="text-sm mt-2 space-y-1 text-gray-700 dark:text-gray-300">
             <li>AWS Academy Cloud Foundation</li>
-            <li>Hands-on Web Development with Hyperapp – Infosys Springboard</li>
+            <li>Hands-on Web Development — Infosys Springboard</li>
             <li>Getting Started with MongoDB Atlas</li>
           </ul>
         </div>
+
         <div>
-          <h3 className="font-semibold">Languages</h3>
-          <ul className="text-sm mt-2 space-y-1">
+          <h3 className="font-semibold text-black dark:text-white">Languages</h3>
+          <ul className="text-sm mt-2 space-y-1 text-gray-700 dark:text-gray-300">
             <li>English, Hindi, Bhojpuri</li>
           </ul>
         </div>
+
       </div>
     </section>
   )
