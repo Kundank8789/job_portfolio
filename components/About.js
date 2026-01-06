@@ -24,12 +24,11 @@ export default function About() {
       </p>
 
       <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-        I am currently seeking full-time opportunities where I can contribute to impactful projects
-        and grow as a developer.
+        I'm actively seeking full-time opportunities where I can contribute to impactful projects, collaborate with talented teams, and continue growing as a developer.
       </p>
 
       <div className="mt-6 grid md:grid-cols-3 gap-4">
-        
+
         <div>
           <h3 className="font-semibold text-black dark:text-white">Skills</h3>
           <ul className="text-sm mt-2 space-y-1 text-gray-700 dark:text-gray-300">
@@ -50,9 +49,9 @@ export default function About() {
         </div>
 
         <div>
-          <h3 className="font-semibold text-black dark:text-white">Languages</h3>
+          <h3 className="font-semibold text-black dark:text-white"></h3>
           <ul className="text-sm mt-2 space-y-1 text-gray-700 dark:text-gray-300">
-            <li>English, Hindi, Bhojpuri</li>
+            <li></li>
           </ul>
         </div>
 
