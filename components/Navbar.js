@@ -70,7 +70,7 @@ export default function Navbar({ toggleTheme, theme }) {
             variants={itemVariants}
             whileHover={{ y: -2, scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
-            href="/assets/resume/Kundan_Kumar_resume.pdf"
+            href="/assets/resume/Kundan_Kumar_Resume_Final(1).pdf"
             download
             className="px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition"
           >
