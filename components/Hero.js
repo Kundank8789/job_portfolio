@@ -11,7 +11,7 @@ export default function Hero() {
 
         <div className="mt-6 flex gap-4">
           <a
-            href="/assets/resume/Kundan_Kumar_Resume_Balanced_Spaced_BlackLinks.pdf"
+            href="/assets/resume/Kundan_Kumar_Resume_Final(1).pdf"
             download
             className="inline-block bg-black dark:bg-white dark:text-black text-white px-5 py-2 rounded-md hover:opacity-90 transition"
           >
