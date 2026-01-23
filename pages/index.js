@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Footer from "../components/Footer";
-import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import ScrollToTop from "../components/ScrollToTop";
 import StructuredData from "../components/StructuredData";
@@ -18,7 +17,6 @@ export default function Home({ toggleTheme, theme }) {
 
         <main className="max-w-5xl mx-auto p-6">
           <Hero />
-          <Skills />
           <Projects />
           <About />
           <Contact />
