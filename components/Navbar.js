@@ -239,7 +239,7 @@ export default function Navbar({ toggleTheme, theme }) {
               ))}
 
               <a
-                href="/assets/resume/Kundan_Kumar_Resume_FINAL(1).pdf"
+                href="public/assets/resume/Kundan_Kumar_Resume_FINAL(1).pdf"
                 download
                 className="block text-sm text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-xl transition"
                 onClick={closeMenu}

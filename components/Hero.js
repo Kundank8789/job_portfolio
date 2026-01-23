@@ -118,7 +118,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                href="/Kundan_Kumar_Resume_FINAL(1).pdf"
+                href="public/Kundan_Kumar_Resume_FINAL(1).pdf"
                 download
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl 
                 border border-gray-300 dark:border-zinc-700 
