@@ -1,9 +1,13 @@
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import MouseGradient from "../components/MouseGradient";
+import FloatingParticles from "../components/FloatingParticles";
+import FunFact from "../components/FunFact";
 
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -11,15 +15,18 @@ export default function App({ Component, pageProps }) {
       setTheme(storedTheme);
       document.documentElement.classList.toggle("dark", storedTheme === "dark");
     }
+    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-
     document.documentElement.classList.toggle("dark", newTheme === "dark");
     localStorage.setItem("theme", newTheme);
   };
+
+  // Prevent flash of wrong theme
+  if (!mounted) return null;
 
   return (
     <>
@@ -68,8 +75,12 @@ export default function App({ Component, pageProps }) {
         <link rel="canonical" href="https://job-portfolio-dusky.vercel.app/" />
       </Head>
 
-      {/* ✅ Pass theme toggle function to all components */}
-      <Component {...pageProps} toggleTheme={toggleTheme} theme={theme} />
+      {/* 🎨 Wrap everything with MouseGradient that respects theme */}
+      <MouseGradient theme={theme}>
+        <FloatingParticles theme={theme} />
+        <Component {...pageProps} toggleTheme={toggleTheme} theme={theme} />
+        <FunFact theme={theme} />
+      </MouseGradient>
     </>
   );
 }
